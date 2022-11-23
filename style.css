@@ -1,0 +1,235 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+section {
+	scroll-margin-top: 60px;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+
+.hero-bg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(5, 16, 22, 0.5);
+}
+
+.hero-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	font-family: 'Poiret One';
+	text-align: center;
+}
+
+.hero-text h1 {
+	margin-bottom: 5px;
+	text-shadow: 3px 3px 5px rgb(62, 62, 62);
+	font-weight: 400;
+	letter-spacing: 1px;
+	font-size: 50px;
+}
+
+.hero-text p {
+	font-size: 14px;
+}
+
+.hero-text span {
+	text-transform: uppercase;
+	color: rgb(255, 206, 82);
+}
+
+.section-title {
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+/* nawigacja */
+
+nav {
+	position: sticky;
+	top: 0;
+	height: 60px;
+	line-height: 60px;
+	background-color: #ddd;
+	text-align: center;
+	z-index: 10;
+}
+
+.burger-icon {
+	display: block;
+	margin-left: auto;
+	padding: 0 30px;
+	background: none;
+	line-height: 60px;
+	font-size: 30px;
+	border: none;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.burger-icon:hover {
+	transform: scale(1.5);
+}
+
+.nav-items {
+	display: none;
+}
+
+.nav-items a {
+	padding: 0 30px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #333;
+	transition: color 0.3s;
+}
+
+.nav-items a:hover {
+	color: rgb(255, 183, 0);
+}
+
+/* header */
+
+.header {
+	position: relative;
+	height: 330px;
+	background-image: url(./assets/hero-small.jpg);
+	background-size: cover;
+}
+
+main {
+	margin: 60px 0;
+}
+
+.about-us-info {
+	margin-bottom: 10px;
+	padding: 0 20px;
+}
+
+.products {
+	margin: 60px auto;
+}
+
+.product {
+	position: relative;
+	height: 300px;
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.product h3 {
+	text-transform: uppercase;
+	transition: transform 0.3s;
+}
+
+.first-product {
+	background-image: url(./assets/design-small.jpg);
+}
+
+.second-product {
+	background-image: url(./assets/arch-small.JPG);
+}
+
+.third-product {
+	background-image: url(./assets/photography-small.jpg);
+}
+
+.forth-product {
+	background-image: url(./assets/travel-small.jpg);
+}
+
+.product:hover h3 {
+	transform: scale(2);
+}
+
+.contact {
+	text-align: center;
+}
+
+.contact h3 {
+	margin: 20px 0 5px;
+	text-transform: uppercase;
+}
+
+/* footer */
+
+footer {
+	padding: 30px 10px;
+	text-align: center;
+	background-color: #ddd;
+}
+
+@media (min-width: 768px) {
+	.burger-icon {
+		display: none;
+	}
+	.nav-items {
+		display: block;
+	}
+
+	.header {
+		position: relative;
+		height: 400px;
+		background-image: url(./assets/hero-big.jpg);
+		background-size: cover;
+		background-position: center;
+	}
+
+	.hero-text h1 {
+		font-size: 50px;
+	}
+
+	.hero-text p {
+		font-size: 22px;
+	}
+
+	.products h3 {
+		font-size: 24px;
+	}
+}
+
+@media (min-width: 992px) {
+	.product {
+		display: inline-block;
+		width: 50%;
+	}
+
+	.products-box {
+		font-size: 0;
+	}
+
+	.hero-text p {
+		font-size: 30px;
+	}
+}
+@media (min-width: 1200px) {
+	.hero-text h1 {
+		font-size: 70px;
+	}
+
+	.hero-text p {
+		font-size: 30px;
+	}
+}
